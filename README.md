@@ -1,4 +1,20 @@
-# Getting Started with Create React App
+# Facebook Clone
+
+Technologies used in Facebook Clone:
+- React and React Hooks
+- React Context API -> Redux pattern
+- Material UI (for icons)
+- Flexbox
+- Firebase's Firestore real-time database
+- Firebase Hosting
+- Firebase Google Authentication (Full login)
+
+- React Flip feature
+
+npm installs
+- npm install @material-ui/core
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
