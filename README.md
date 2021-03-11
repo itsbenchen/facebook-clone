@@ -11,8 +11,11 @@ Technologies used in Facebook Clone:
 
 - React Flip feature
 
+- Color of Facebook: #2e81f4;
+
 npm installs
 - npm install @material-ui/core
+- npm install @material-ui/icons
 
 ## Getting Started with Create React App
 
