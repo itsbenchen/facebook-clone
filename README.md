@@ -17,6 +17,10 @@ npm installs
 - npm install @material-ui/core
 - npm install @material-ui/icons
 
+Features of Facebook Clone:
+- Header
+- Sidebar (left side of screen)
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
