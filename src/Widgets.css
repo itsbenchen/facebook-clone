@@ -1,0 +1,10 @@
+.widgets {
+    padding-left: 20px;
+}
+
+.widgets > iframe {
+    display: block;
+    border: none;
+    overflow: hidden;
+    margin-bottom: 20px;
+}

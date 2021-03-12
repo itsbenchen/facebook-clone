@@ -21,6 +21,7 @@ Components of Facebook Clone:
 - Header
 - Sidebar (Left side)
 - Feed (Center)
+- Widgets
 
 ## Getting Started with Create React App
 
