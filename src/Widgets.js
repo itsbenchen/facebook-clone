@@ -11,8 +11,8 @@ function Widgets() {
                 width="360" 
                 height="800" 
                 scrolling="no" 
-                frameborder="0" 
-                allowfullscreen="true" 
+                frameBorder="0" 
+                allowFullScreen={true} 
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
             ></iframe>
 
@@ -22,8 +22,8 @@ function Widgets() {
                 width="360" 
                 height="800" 
                 scrolling="no"
-                frameborder="0" 
-                allowfullscreen="true" 
+                frameBorder="0" 
+                allowFullScreen={true}
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
             ></iframe>
         </div>

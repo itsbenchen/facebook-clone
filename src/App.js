@@ -13,11 +13,19 @@ function App() {
       {/* App Body */}
       <div className="app_body">
         {/* Sidebar */}
-        <Sidebar />
+        <div className="app_sidebar">
+          <Sidebar  />
+        </div>
+        
         {/* Feed */}
-        <Feed />
+        <div className="app_feed">
+          <Feed />
+        </div>
+        
         {/* Widgets */}
-        <Widgets />
+        <div className="app_widgets">
+          <Widgets />
+        </div>
       </div>
 
     </div>

@@ -1,3 +1,18 @@
 .app_body {
     display: flex;
 }
+
+.app_sidebar {
+    max-width: 360px;
+}
+
+.app_feed {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.app_widgets {
+    max-width: 360px;
+    margin: 0 20px auto auto;
+}

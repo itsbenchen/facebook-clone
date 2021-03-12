@@ -30,6 +30,13 @@ function StoryReel() {
                 profileSource="https://i.pinimg.com/originals/c8/bd/a9/c8bda99ff35a1aca879a77d8dfb84dd2.jpg"
                 title="Ben Chen"
             />
+
+            <Story 
+                image="https://www.anime-planet.com/images/anime/covers/naruto-shippuden-1131.jpg" 
+                profileSource="https://i.pinimg.com/736x/9a/b6/a2/9ab6a2794d0ed343a4c5d489f5d9828d.jpg"
+                title="Naruto Uzumaki"
+            />
+
         </div>
     );
 }

@@ -1,5 +1,10 @@
 .widgets {
+    display: block;
     padding-left: 20px;
+}
+
+.widgets > * {
+    border-bottom: 1px solid gray;
 }
 
 .widgets > iframe {
