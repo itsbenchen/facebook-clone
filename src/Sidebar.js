@@ -13,7 +13,7 @@ import ExpandMoreOutlinedIcon from "@material-ui/icons/ExpandMoreOutlined";
 
 function Sidebar() {
     return(
-        <div class="sidebar">
+        <div className="sidebar">
             {/* User profile */}
             <SidebarOption source="https://i.pinimg.com/originals/c8/bd/a9/c8bda99ff35a1aca879a77d8dfb84dd2.jpg" title="Ben Chen" />
 

@@ -17,9 +17,10 @@ npm installs
 - npm install @material-ui/core
 - npm install @material-ui/icons
 
-Features of Facebook Clone:
+Components of Facebook Clone:
 - Header
-- Sidebar (left side of screen)
+- Sidebar (Left side)
+- Feed (Center)
 
 ## Getting Started with Create React App
 
