@@ -32,3 +32,5 @@ Notes: The program is run with my firebase credentials, so any posts you see and
 ## Features
 - User Login (Utilizing Firebase for the backend)
 - Users can make a post 
+
+Note: Ad-block seems to block certain images (e.g. Facebook logo), so turning it off may be needed
