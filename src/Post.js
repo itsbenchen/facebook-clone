@@ -29,10 +29,14 @@ function Post({ profilePicture, image, username, timestamp, message }) {
                 <p>{message}</p>
             </div>
 
-            {/* Post image */}
-            <div className="post_image">
-                <img src={image} alt="" />
-            </div>
+            {/* Post image; render if it exists */}
+
+            {image && 
+                <div className="post_image">
+                    {<img src={image} alt="" />}  
+                </div>
+            }
+            
 
             {/* Post options: Likes, Comment, Share, etc... */}
             <div className="post_options">

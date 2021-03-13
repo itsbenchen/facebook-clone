@@ -72,22 +72,22 @@ function Header() {
                 </div>
                 
                 {/* Create */}
-                <IconButton>
+                <IconButton className="icon_option">
                     <AddIcon />
                 </IconButton>
 
                 {/* Messenger */}
-                <IconButton>
+                <IconButton className="icon_option">
                     <ForumIcon />
                 </IconButton>
 
                 {/* Notifications */}
-                <IconButton>
+                <IconButton className="icon_option">
                     <NotificationActiveIcon />
                 </IconButton>
 
                 {/* Account Stuff */}
-                <IconButton>
+                <IconButton className="icon_option">
                     <ExpandMoreIcon />
                 </IconButton>
 

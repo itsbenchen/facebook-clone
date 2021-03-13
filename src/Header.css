@@ -80,8 +80,11 @@
 /* Right side of Header */
 .header_right {
     display: flex;
-    margin-right: 20px;
     max-width: 360px;
+}
+
+.icon_option > .MuiIconButton-label {
+    color: black;
 }
 
 .header_right > button {
@@ -91,15 +94,22 @@
 
 .header_right > button:hover {
     background-color: #d5d7db;
-    
 }
 
 .header_info {
     display: flex;
     align-items: center;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.header_info:hover {
+    background-color: #e4e6eb;
+    border-radius: 999px;
 }
 
 .header_info > h4 {
-    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
 }
 
