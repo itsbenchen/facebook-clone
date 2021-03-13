@@ -43,6 +43,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    max-width: 700px;
 }
 
 .header_option {
@@ -79,6 +80,7 @@
 /* Right side of Header */
 .header_right {
     display: flex;
+    margin-right: 20px;
     max-width: 360px;
 }
 

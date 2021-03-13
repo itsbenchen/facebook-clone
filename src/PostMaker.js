@@ -5,8 +5,10 @@ import VideocamIcon from "@material-ui/icons/Videocam";
 import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 
-function PostMaker({ profileSource }) {
+import { useStateValue } from "./StateProvider";
 
+function PostMaker() {
+    const [{ user }] = useStateValue();
     const [input, setInput] = useState("");
     const [imageURL, setImageURL] = useState("");
 
@@ -26,14 +28,14 @@ function PostMaker({ profileSource }) {
             {/* PostMaker Top */}
             <div className="postMaker_top">
                 {/* Profile Avatar */}
-                <Avatar variant="circular" src={profileSource} />
+                <Avatar variant="circular" src={user.photoURL} />
 
                 {/* Input content & Image URL */}
                 <form>
                     <input 
                         className="postMaker_input" 
                         type="text" 
-                        placeholder={"What's on your mind, name?"} 
+                        placeholder={`What's on your mind, ${user.displayName}?`} 
                         value={input} 
                         onChange={(e) => setInput(e.target.value)}
                     />

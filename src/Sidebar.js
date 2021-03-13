@@ -11,11 +11,16 @@ import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
 
 import ExpandMoreOutlinedIcon from "@material-ui/icons/ExpandMoreOutlined";
 
+import { useStateValue } from "./StateProvider";
+
 function Sidebar() {
+
+    const [{ user }, dispatch] = useStateValue();
+
     return(
         <div className="sidebar">
             {/* User profile */}
-            <SidebarOption source="https://i.pinimg.com/originals/c8/bd/a9/c8bda99ff35a1aca879a77d8dfb84dd2.jpg" title="Ben Chen" />
+            <SidebarOption source={user.photoURL} title={user.displayName} />
 
             <SidebarOption Icon={LocalHospitalIcon} title="COVID-19 Information Center"/>
 

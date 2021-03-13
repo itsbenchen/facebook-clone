@@ -15,8 +15,11 @@ import ForumIcon from "@material-ui/icons/Forum";
 import NotificationActiveIcon from "@material-ui/icons/NotificationsActive";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
+import { useStateValue } from "./StateProvider";
 
 function Header() {
+    const [{ user }] = useStateValue();
+
     return (
         <div className="header">
 
@@ -63,8 +66,9 @@ function Header() {
             <div className="header_right">
                 {/* Avatar/Profile */}
                 <div className="header_info">
-                    <Avatar />
-                    <h4>itsbenchen</h4>
+                    {/* Display user photo and name */}
+                    <Avatar src={user.photoURL} /> 
+                    <h4>{user.displayName}</h4>
                 </div>
                 
                 {/* Create */}

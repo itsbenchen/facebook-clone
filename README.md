@@ -1,10 +1,11 @@
 # Facebook Clone
 
-Technologies used in Facebook Clone:
+Technology Stack used:
 - React and React Hooks
 - React Context API -> Redux pattern
+
 - Material UI (for icons)
-- Flexbox
+
 - Firebase's Firestore real-time database
 - Firebase Hosting
 - Firebase Google Authentication (Full login)
@@ -16,12 +17,16 @@ Technologies used in Facebook Clone:
 npm installs
 - npm install @material-ui/core
 - npm install @material-ui/icons
+- npm install firebase
 
 Components of Facebook Clone:
 - Header
 - Sidebar (Left side)
 - Feed (Center)
-- Widgets
+- Widgets (Right side)
+
+Features
+- User Login (Utilizing Firebase for the backend)
 
 ## Getting Started with Create React App
 
