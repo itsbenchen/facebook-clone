@@ -9,7 +9,7 @@ export const actionTypes = {
 };
 
 const reducer = (state, action) => {
-    console.log("Received an action: ", action);
+    // console.log("Received an action: ", action); // Avoid showing the action in console as it could contain user data
     switch(action.type) {
         case actionTypes.SET_USER: 
             return { // Returns a new data layer for specific action

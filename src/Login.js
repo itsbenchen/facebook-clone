@@ -9,7 +9,7 @@ import { actionTypes } from "./reducer";
 import { useStateValue } from "./StateProvider";
 
 function Login() {
-    const [state, dispatch] = useStateValue(); // Hook
+    const [state, dispatch] = useStateValue(); // Hook; state is unused
 
     const signIn = () => {
 

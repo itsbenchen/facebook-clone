@@ -1,39 +1,52 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./Feed.css";
 import StoryReel from "./StoryReel";
 import PostMaker from "./PostMaker";
 import Post from "./Post";
+import database from "./firebase";
 
 function Feed() {
+    const [posts, setPosts] = useState([]); // Initally no post
+
+    // Ran only once
+    useEffect(() => {
+        // Get real-time snapshot of state from database
+        database.collection("posts")
+            .orderBy("timestamp", "desc") // Order posts by their timestamp in descending order
+            .onSnapshot((snapshot) => 
+                 // Map through every single doc and return an object with the doc.id and the doc.data() --> The fields in the document
+                setPosts(
+                    snapshot.docs.map((doc) => ({
+                        id: doc.id, 
+                        data: doc.data()
+                    }))
+                )
+            );
+    }, []);
+
     return(
         <div className="feed">
             {/* Story Reel */}
             <StoryReel />
+
             {/* Post Maker */}
             <PostMaker />
-            {/* All the post on your feed */}
-            <Post 
-                profilePicture="https://i.pinimg.com/originals/c8/bd/a9/c8bda99ff35a1aca879a77d8dfb84dd2.jpg"
-                image=""
-                username="Ben Chen"
-                timestamp="1/1/2021"
-                message="Hello There!"
-            />
-            <Post 
-                profilePicture="https://i.pinimg.com/originals/c8/bd/a9/c8bda99ff35a1aca879a77d8dfb84dd2.jpg"
-                image="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
-                username="Ben Chen"
-                timestamp="2/28/2021"
-                message="Bye!"
-            />
-                
-            <Post 
-                profilePicture="https://i.pinimg.com/originals/c8/bd/a9/c8bda99ff35a1aca879a77d8dfb84dd2.jpg"
-                image="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
-                username="Ben Chen"
-                timestamp="3/1/2021"
-                message="I'm one with the force, the force is with me"
-            />
+            
+            {/* All the post on your feed is below: */}
+            {/* Get each post and create it */}
+            {posts.map((post) => (
+                <Post
+                    key={post.id}   // Unique identifier for post
+
+                    // When we made our mapping, we placed data within the "data" for each post
+                    profilePicture={post.data.profilePicture}
+                    image={post.data.image}
+                    username={post.data.username}
+                    timestamp={post.data.timestamp} // Note: timestamp in our database was a timestamp object (not a string)
+                    message={post.data.message}
+                />
+            ))}
+            
         </div>
     );
 }

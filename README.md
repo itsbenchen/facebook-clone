@@ -1,18 +1,10 @@
 # Facebook Clone
 
-Technology Stack used:
-- React and React Hooks
-- React Context API -> Redux pattern
-
-- Material UI (for icons)
-
-- Firebase's Firestore real-time database
+Technology Stack:
+- ReactJS (with React Hooks)
+- Firebase real-time database
 - Firebase Hosting
 - Firebase Google Authentication (Full login)
-
-- React Flip feature
-
-- Color of Facebook: #2e81f4;
 
 npm installs
 - npm install @material-ui/core
@@ -27,6 +19,7 @@ Components of Facebook Clone:
 
 Features
 - User Login (Utilizing Firebase for the backend)
+- Users can make a post 
 
 ## Getting Started with Create React App
 

@@ -6,9 +6,12 @@ import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 
 import { useStateValue } from "./StateProvider";
+import database from "./firebase";
+
+import firebase from "firebase"; // Import from actual firebase
 
 function PostMaker() {
-    const [{ user }] = useStateValue();
+    const [{ user }, dispatch] = useStateValue();
     const [input, setInput] = useState("");
     const [imageURL, setImageURL] = useState("");
 
@@ -16,6 +19,17 @@ function PostMaker() {
         e.preventDefault(); // Prevents the page from refreshing
         if (input) { // If there is input
             // TODO: Database Work
+            
+            database.collection("posts")
+                .add(   // Add post to database
+                    {
+                        message: input,
+                        timestamp: firebase.firestore.FieldValue.serverTimestamp(),  // Get time from server rather than user
+                        profilePicture: user.photoURL,
+                        username: user.displayName,
+                        image: imageURL
+                    }
+                )
 
             // Reset values
             setInput("");

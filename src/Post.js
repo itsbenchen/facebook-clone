@@ -18,7 +18,8 @@ function Post({ profilePicture, image, username, timestamp, message }) {
 
                 <div className="post_topInfo">
                     <h3>{username}</h3>
-                    <p>{timestamp}...</p>
+                    {/* Renders out a readable date; the ? is to protect if anything goes wrong */}
+                    <p>{new Date(timestamp?.toDate()).toLocaleString()}</p> 
                 </div>
 
             </div>

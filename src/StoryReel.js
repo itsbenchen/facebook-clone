@@ -5,6 +5,7 @@ import Story from "./Story";
 function StoryReel() {
     return(
         <div className="storyReel">
+            {/* Hardcoded Story Reels; TODO: Allow user to create "stories"? */}
             <Story
                 image="https://observer.com/wp-content/uploads/sites/2/2020/03/GettyImages-1185360127-e1583272010470.jpg?quality=80" 
                 profileSource="http://www.gstatic.com/tv/thumb/persons/589228/589228_v9_ba.jpg"
@@ -28,7 +29,7 @@ function StoryReel() {
             <Story 
                 image="https://i.pinimg.com/originals/73/33/33/733333bd820b9df1a622a43a5275f7f7.jpg" 
                 profileSource="https://i.pinimg.com/originals/c8/bd/a9/c8bda99ff35a1aca879a77d8dfb84dd2.jpg"
-                title="Ben Chen"
+                title="Jade Lieu"
             />
 
             <Story 
